@@ -2,6 +2,6 @@
 @manifoldxyz/=lib/creator-core-solidity
 @chainlink/=lib/chainlink
 @openzeppelinn/=lib/openzeppelin-contracts-upgradeable/contracts/
-ds-test/=lib/solmate/lib/ds-test/src/
+ds-test/=lib/forge-std/lib/ds-test/src/
 forge-std/=lib/forge-std/src/
 solmate/=lib/solmate/src/

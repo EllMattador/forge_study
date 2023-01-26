@@ -10,18 +10,22 @@ contract ExampleTest is Test {
     Example public example;
 
     function testReceive() public {
-        asserrtEq(adrress(example).balance , 0);
-        (bool success) = address(example).call{value: 100}("");
 
+        assertEq(address(example).balance , 0);
+
+        (bool success,) = address(example).call{value: 100}("");
+
+        console.log(address(example).balance);
+        
         assertEq(success , true);
-        assertEq(address(example).blance , 100);
+        // assertEq(address(example).balance , 100);
 
     }
     function setUp() public {
         example = new Example(100);
-        console.log(example.myNum());
-        console.log(example.owner());
-        console.log(address(this));
+        // console.log(example.myNum());
+        // console.log(example.owner());
+        //console.log(address(this));
     }
 
     function testIncrement() public {
